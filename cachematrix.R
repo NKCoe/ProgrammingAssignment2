@@ -50,22 +50,22 @@ cacheSolve <- function(m)
         data<-m$getmatrix()
         if(is.null(inverse))
         {
-                message("I had no cache so built this for you")
+                # message("I had no cache so built this for you")
                 inverse = solve(data)
                 m$setinverse(inverse)
         }
         inverse
 }
 
-myMatrix<- matrix (rnorm(9),ncol=3)
-myMatrix
-m1<-makeCacheMatrix(myMatrix)
-cacheSolve(m1)
-myMatrix <- setmatrix(matrix(rnorm(9),ncol=3))
-myMatrix
+#myMatrix<- matrix (rnorm(9),ncol=3)
+#myMatrix
+#m1<-makeCacheMatrix(myMatrix)
+#cacheSolve(m1)
+#myMatrix <- setmatrix(matrix(rnorm(9),ncol=3))
+#myMatrix
 
-m2<-makeCacheMatrix(myMatrix)
-det(m2)
-cacheSolve(m2)
+#m2<-makeCacheMatrix(myMatrix)
+#det(m2)
+#cacheSolve(m2)
 
 
